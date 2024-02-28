@@ -1,16 +1,14 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { BackgroundBeamsDemo } from "./components/background-beams";
-import { TextGenerateEffect } from "./components/text-generate-effect";
+import { ContactPage } from "./components/contact-page";
+import HomePage from "./components/home-page";
 
 function App() {
   return (
     <div className="App bg-black">
-      <TextGenerateEffect
-        words={"Hello, My Name is Nahiyan. A web developer"}
-      />
-      <BackgroundBeamsDemo />
+      <HomePage />
+      <ContactPage />
     </div>
   );
 }
