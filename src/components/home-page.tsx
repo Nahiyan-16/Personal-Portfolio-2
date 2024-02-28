@@ -16,7 +16,7 @@ const HomePage = () => {
     <div className="h-screen bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
       <TextGenerateEffect words={data.introduction} className="text-2xl" />
       {showDelayedSentence ? (
-        <TextGenerateEffect words={data.about} className="text-xl" />
+        <TextGenerateEffect words={data.about} className="text-xl w-[350px]" />
       ) : (
         <div className="block"></div>
       )}

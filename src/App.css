@@ -37,3 +37,14 @@
     transform: rotate(360deg);
   }
 }
+
+.rounded-bottom {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* Scroll Bar*/
+
+::-webkit-scrollbar {
+  width: 0px;
+}
