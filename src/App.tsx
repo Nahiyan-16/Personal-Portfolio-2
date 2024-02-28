@@ -3,8 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { ContactPage } from "./components/contact-page";
 import HomePage from "./components/home-page";
-import { FloatingNav } from "./components/navbar";
 import { TracingBeam } from "./components/tracing-beam";
+import NavbarMenu from "./components/navbar";
 
 function App() {
   const testProps = {
@@ -20,7 +20,7 @@ function App() {
       <TracingBeam
         children={
           <>
-            <FloatingNav {...testProps} />
+            <NavbarMenu />
             <HomePage />
             <ContactPage />
           </>
