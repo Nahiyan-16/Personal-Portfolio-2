@@ -1,11 +1,15 @@
 import { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./navbar-menu";
+import { HoveredLink, Menu, MenuItem, ProjectItem } from "./navbar-menu";
 import { cn } from "../utils/cn";
+import dashboardImg from "../images/dashboard.png";
+import webCrawlerImg from "../images/webCrawler.png";
+import planYourDayImg from "../images/PlanYourDay.png";
+import nanotronicsImg from "../images/Nanotronics.jpg";
 
 const NavbarMenu = () => {
   return (
     <div className="relative w-full flex items-center justify-center">
-      <Navbar className="top-2" />
+      <Navbar className="top-5" />
     </div>
   );
 };
@@ -18,7 +22,7 @@ function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Links">
-          <div className="flex flex-col space-y-4 text-sm">
+          <div className="flex flex-col space-y-4 text-md">
             <HoveredLink href="https://www.linkedin.com/in/nahiyanahmed/">
               LinkedIn
             </HoveredLink>
@@ -35,38 +39,36 @@ function Navbar({ className }: { className?: string }) {
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Projects">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-            <ProductItem
+            <ProjectItem
               title="Plan Your Day"
               href="/planYourDay"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Prepare for tech interviews like never before."
+              src={planYourDayImg}
+              description="A personalized planning web application"
             />
-            <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Production ready Tailwind css components for your next project"
+            <ProjectItem
+              title="nAnalysis Converter"
+              href="/nAnalysisConverter"
+              src={nanotronicsImg}
+              description="A C++ and MFC application designed to update databases"
             />
-            <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Never write from scratch again. Go from idea to blog in minutes."
+            <ProjectItem
+              title="Personal Dashboard"
+              href="/dashboard"
+              src={dashboardImg}
+              description="A customizable dashboard made to enliven the user experience"
             />
-            <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+            <ProjectItem
+              title="Web Crawler"
+              href="/webCrawler"
+              src={webCrawlerImg}
+              description="A java application created to gather images from websites"
             />
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
+        <MenuItem setActive={setActive} active={active} item="Contact">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+            <HoveredLink href="/about">About</HoveredLink>
+            <HoveredLink href="/contact">Contact</HoveredLink>
           </div>
         </MenuItem>
       </Menu>

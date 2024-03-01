@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  color: wheat;
+  color: aliceblue;
 }
 
 .App-logo {
@@ -38,13 +38,12 @@
   }
 }
 
-.rounded-bottom {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-}
-
 /* Scroll Bar*/
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.project-detail-list li {
+  list-style: square;
 }
