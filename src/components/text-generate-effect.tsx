@@ -35,7 +35,7 @@ export const TextGenerateEffect = ({
               className={word === "Nahiyan" ? "opacity-1" : "opacity-0"}
             >
               {word === "Nahiyan" ? (
-                <a href="/about" className="text-blue-500">
+                <a href="#about" className="text-blue-500">
                   Nahiyan
                 </a>
               ) : (

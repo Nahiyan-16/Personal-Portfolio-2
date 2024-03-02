@@ -25,7 +25,7 @@ export const MenuItem = ({
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 1 }}
         className="cursor-pointer hover:opacity-[0.9] text-lg"
       >
         {item}
@@ -37,7 +37,7 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2">
+            <div className="absolute top-[calc(100%_+_1rem)] left-1/2 transform -translate-x-1/2">
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
@@ -106,8 +106,10 @@ export const ProjectItem = ({
 };
 
 export const HoveredLink = ({ children, ...rest }: any) => {
+  console.log(children);
   return (
     <a
+      target={children === "About" || children === "Contact" ? "" : "_blank"}
       {...rest}
       className="text-neutral-700 dark:text-neutral-200 hover:text-neutral-500 "
     >

@@ -96,6 +96,7 @@ export const CardBody = ({
 
 export const CardItem = ({
   as: Tag = "div",
+  link,
   children,
   className,
   translateX = 0,
@@ -107,6 +108,7 @@ export const CardItem = ({
   ...rest
 }: {
   as?: React.ElementType;
+  link?: string;
   children: React.ReactNode;
   className?: string;
   translateX?: number | string;
@@ -132,11 +134,16 @@ export const CardItem = ({
     }
   };
 
+  const handleClick = () => {
+    window.open(link, "_blank");
+  };
+
   return (
     <Tag
       ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
       {...rest}
+      onClick={handleClick}
     >
       {children}
     </Tag>

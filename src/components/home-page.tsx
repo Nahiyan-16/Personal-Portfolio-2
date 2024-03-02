@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { TextGenerateEffect } from "../components/text-generate-effect";
 import data from "../data/home-page-data";
-import Links from "./Links";
 import linkedInLogo from "../images/linkedin.png";
 import githubLogo from "../images/github.png";
 import instaLogo from "../images/insta.png";
@@ -39,30 +38,34 @@ const HomePage = () => {
       )}
       {showDelayedLogo ? (
         <div className="flex space-x-2 mt-2">
-          <Links
-            link="https://www.linkedin.com/in/nahiyanahmed/"
-            source={linkedInLogo}
-            alternative="LinkedIn Logo"
-            width="26px"
-          />
-          <Links
-            link="https://github.com/Nahiyan-16/"
-            source={githubLogo}
-            alternative="Github Logo"
-            width="25px"
-          />
-          <Links
-            link="https://www.instagram.com/nahiyan16/"
-            source={instaLogo}
-            alternative="Instagram Logo"
-            width="24px"
-          />
-          <Links
-            link="https://www.youtube.com/channel/UC9zr1Q2LtQtxtlKc45P7kMA"
-            source={youtubeLogo}
-            alternative="Youtube Logo"
-            width="26px"
-          />
+          <a
+            href="https://www.linkedin.com/in/nahiyanahmed/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedInLogo} alt="LinkedIn Logo" width="36px" />
+          </a>
+          <a
+            href="https://github.com/Nahiyan-16/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={githubLogo} alt="Github Logo" width="35px" />
+          </a>
+          <a
+            href="https://www.instagram.com/nahiyan16/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={instaLogo} alt="Instagram Logo" width="34px" />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UC9zr1Q2LtQtxtlKc45P7kMA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={youtubeLogo} alt="Youtube Logo" width="36px" />
+          </a>
         </div>
       ) : (
         <div className="block"></div>

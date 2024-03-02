@@ -34,12 +34,12 @@ export default {
       "Configured the app to utilize three different APIs (Unsplash, OpenWeatherMap & GreetingsAPI) to asynchronously bring in stunning images, current weather, and random greetings from all over the world",
       "Implemented a method in which the user can add or remove bookmarks in local storage which can be accessed when the user returns",
     ],
-    link: "https://nahiyan-dashboard.netlify.app/",
+    link: "https://nahiyans-dashboard.netlify.app/",
     image: dashboardImg,
   },
   project4: {
     title: "Web Crawler",
-    shortDesc: "",
+    shortDesc: "A java application created to gather images from websites",
     description: [
       "A web crawler written in Java that uses the programming language Java to navigate through the pages of a website, gathering images.",
       "The app follows links from one page to another, and can be configured to only visit certain types of pages, or to exclude certain types of pages.",
@@ -49,6 +49,6 @@ export default {
     image: webCrawlerImg,
   },
   about: {
-    text: "My name is Nahiyan, I am a recent graduate of Queens College with a degree in computer science. I am a skilled web developer with experience in several programming languages, including JavaScript, Java, C++, and ReactJS. Throughout my time in college and at my internship at Nanotronics Imaging, I was able to work on several projects, both individually and in a team setting, which helped me to gain hands-on experience and develop a strong understanding of web development. I have a good understanding of front-end development and have a good grasp of JavaScript and ReactJS. I also have experience working with backend development and I have a good understanding of Java and C++. I am now seeking employment opportunities as a web developer to utilize my knowledge and skills to contribute to the growth and success of a company. I am excited to continue learning and growing as a developer in the field. I am open to learning new technologies and programming languages to stay current with the fast-paced industry. I am a quick learner and I am always eager to take on new challenges. I am confident that with my skills, I will be able to make meaningful contributions to any team that I will be a part of.",
+    text: "My name is Nahiyan, and I am currently working as a Full Stack Developer and Manager in Training at One Community Global, a non-profit organization. I am primarily focused on developing the Highest Good Network application, a collaborative platform for various organizations. Utilizing the MERN stack, I contribute to the development and maintenance of this project. With a degree in Computer Science from Queens College, I possess a robust skill set in web development, including proficiency in JavaScript, Java, C++, and ReactJS. My experiences at Nanotronics Imaging and during my college years have equipped me with hands-on expertise in both individual and team-based projects, fostering a deep understanding of web development principles. I excel in front-end development, with a solid grasp of JavaScript and ReactJS, as well as backend development, with proficiency in Java and C++. Eager to continue learning and adapting to emerging technologies, I am enthusiastic about taking on new challenges and making significant contributions to any team I join.",
   },
 };

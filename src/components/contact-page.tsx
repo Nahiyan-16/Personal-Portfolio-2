@@ -6,7 +6,10 @@ import data from "../data/contact-page-data";
 
 export function ContactPage() {
   return (
-    <div className="bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+    <div
+      className="bg-neutral-950 relative flex flex-col items-center justify-center antialiased h-screen"
+      id="contact"
+    >
       <div className="max-w-2xl mx-auto p-4">
         <h1 className="relative z-10 text-lg md:text-7xl bg-clip-text text-center font-sans font-bold">
           {data.title}

@@ -8,12 +8,13 @@ interface ProjectProps {
   description: string[];
   link: string;
   image: string;
+  id: string;
 }
 
 const Project = (props: ProjectProps) => {
   return (
-    <div className="h-[85vh]">
-      <h1 className="text-[5rem]">{props.title}</h1>
+    <div className="h-screen" id={props.id}>
+      <h1 className="text-[5rem] pt-14">{props.title}</h1>
       <div className="w-full flex px-8 justify-around items-center">
         <CardContainer className="inter-var">
           <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6">
@@ -26,7 +27,7 @@ const Project = (props: ProjectProps) => {
             <CardItem
               as="p"
               translateZ="60"
-              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 text-start"
             >
               {props.shortDesc}
             </CardItem>
@@ -42,18 +43,22 @@ const Project = (props: ProjectProps) => {
             <div className="flex justify-between items-center mt-20">
               <CardItem
                 translateZ={20}
+                link={props.link}
                 as="button"
                 className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
               >
-                Check it out →
+                {props.link && "Check it out →"}
               </CardItem>
-              <CardItem
-                translateZ={20}
-                as="button"
-                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-              >
-                Github
-              </CardItem>
+              {props.link && (
+                <CardItem
+                  link={props.link}
+                  translateZ={20}
+                  as="button"
+                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                >
+                  Github
+                </CardItem>
+              )}
             </div>
           </CardBody>
         </CardContainer>

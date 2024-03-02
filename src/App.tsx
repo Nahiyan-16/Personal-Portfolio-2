@@ -11,7 +11,7 @@ import About from "./components/About";
 
 function App() {
   return (
-    <div className="App bg-black mt-8 relative">
+    <div className="App bg-black mt-8">
       <TracingBeam
         children={
           <>
@@ -23,9 +23,8 @@ function App() {
           </>
         }
       />
-      <div className="h-[700px] flex justify-center items-center text-[9rem] bg-neutral-950 w-[80%] ml-auto mr-auto mb-10">
-        Powered by Aceternity
-      </div>
+      <BackgroundBeams className="mt-8" />
+      <div className="h-[400px] flex justify-center items-center text-[9rem] bg-neutral-950 w-[80%] ml-auto mr-auto mb-10"></div>
     </div>
   );
 }

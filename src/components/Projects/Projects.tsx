@@ -11,6 +11,7 @@ export function Projects() {
         description={data.project1.description}
         link={data.project1.link}
         image={data.project1.image}
+        id={"planYourDay"}
       />
       <Project
         title={data.project2.title}
@@ -18,6 +19,7 @@ export function Projects() {
         description={data.project2.description}
         link={data.project2.link}
         image={data.project2.image}
+        id={"nAnalysisConverter"}
       />
       <Project
         title={data.project3.title}
@@ -25,6 +27,7 @@ export function Projects() {
         description={data.project3.description}
         link={data.project3.link}
         image={data.project3.image}
+        id={"dashboard"}
       />
       <Project
         title={data.project4.title}
@@ -32,6 +35,7 @@ export function Projects() {
         description={data.project4.description}
         link={data.project4.link}
         image={data.project4.image}
+        id={"webCrawler"}
       />
     </div>
   );

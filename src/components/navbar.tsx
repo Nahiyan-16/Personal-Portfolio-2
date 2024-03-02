@@ -41,25 +41,25 @@ function Navbar({ className }: { className?: string }) {
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProjectItem
               title="Plan Your Day"
-              href="/planYourDay"
+              href="#planYourDay"
               src={planYourDayImg}
               description="A personalized planning web application"
             />
             <ProjectItem
               title="nAnalysis Converter"
-              href="/nAnalysisConverter"
+              href="#nAnalysisConverter"
               src={nanotronicsImg}
               description="A C++ and MFC application designed to update databases"
             />
             <ProjectItem
               title="Personal Dashboard"
-              href="/dashboard"
+              href="#dashboard"
               src={dashboardImg}
               description="A customizable dashboard made to enliven the user experience"
             />
             <ProjectItem
               title="Web Crawler"
-              href="/webCrawler"
+              href="#webCrawler"
               src={webCrawlerImg}
               description="A java application created to gather images from websites"
             />
@@ -67,8 +67,8 @@ function Navbar({ className }: { className?: string }) {
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Contact">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/about">About</HoveredLink>
-            <HoveredLink href="/contact">Contact</HoveredLink>
+            <HoveredLink href="#about">About</HoveredLink>
+            <HoveredLink href="#contact">Contact</HoveredLink>
           </div>
         </MenuItem>
       </Menu>
