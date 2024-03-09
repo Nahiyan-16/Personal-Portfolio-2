@@ -32,7 +32,7 @@ export const TracingBeam = ({
 
   useEffect(() => {
     if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight);
+      setSvgHeight(contentRef.current.offsetHeight - 750);
     }
   }, []);
   useEffect(() => {
@@ -59,7 +59,7 @@ export const TracingBeam = ({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative w-full max-w-[80%] mx-auto h-full ", className)}
+      className={cn("relative w-full max-w-[80%] mx-auto h-full", className)}
     >
       <div className="absolute -left-4 md:-left-20 top-3">
         <motion.div

@@ -4,6 +4,9 @@ import planYourDayImg from "../images/PlanYourDay.png";
 import nanotronicsImg from "../images/Nanotronics.jpg";
 
 export default {
+  introduction: "Hi there! I'm Nahiyan a Web Developer",
+  introAbout:
+    "I'm extremely passionate about creating and delivering interactive applications along with a smooth user web experiences",
   project1: {
     title: "Plan Your Day",
     shortDesc: "A personalized planning web application",
@@ -51,4 +54,6 @@ export default {
   about: {
     text: "My name is Nahiyan, and I am currently working as a Full Stack Developer and Manager in Training at One Community Global, a non-profit organization. I am primarily focused on developing the Highest Good Network application, a collaborative platform for various organizations. Utilizing the MERN stack, I contribute to the development and maintenance of this project. With a degree in Computer Science from Queens College, I possess a robust skill set in web development, including proficiency in JavaScript, Java, C++, and ReactJS. My experiences at Nanotronics Imaging and during my college years have equipped me with hands-on expertise in both individual and team-based projects, fostering a deep understanding of web development principles. I excel in front-end development, with a solid grasp of JavaScript and ReactJS, as well as backend development, with proficiency in Java and C++. Eager to continue learning and adapting to emerging technologies, I am enthusiastic about taking on new challenges and making significant contributions to any team I join.",
   },
+  contactTitle: "Hit me up!",
+  contactSubtext: "Get in touch with me",
 };
