@@ -7,6 +7,12 @@ export default {
   introduction: "Hi there! I'm Nahiyan a Web Developer",
   introAbout:
     "I'm extremely passionate about creating and delivering interactive applications along with a smooth user web experiences",
+  myLinks: {
+    linkedIn: "https://www.linkedin.com/in/nahiyanahmed/",
+    github: "https://github.com/Nahiyan-16/",
+    instagram: "https://www.instagram.com/nahiyan16/",
+    youtube: "https://www.youtube.com/channel/UC9zr1Q2LtQtxtlKc45P7kMA",
+  },
   project1: {
     title: "Plan Your Day",
     shortDesc: "A personalized planning web application",

@@ -16,6 +16,13 @@ export const TextGenerateEffect = ({ className }: { className?: string }) => {
   let introArray = data.introduction.split(" ");
   let introContent = data.introAbout.split(" ");
 
+  const logos = [
+    { img: linkedInLogo, link: data.myLinks.linkedIn },
+    { img: githubLogo, link: data.myLinks.github },
+    { img: instaLogo, link: data.myLinks.instagram },
+    { img: youtubeLogo, link: data.myLinks.youtube },
+  ];
+
   useEffect(() => {
     animate(
       "span",
@@ -37,58 +44,23 @@ export const TextGenerateEffect = ({ className }: { className?: string }) => {
       },
       {
         duration: 2,
-        delay: stagger(0.2, { startDelay: 2 }),
+        delay: stagger(0.3, { startDelay: 2 }),
       }
     );
   }, [scope2.current]);
 
   useEffect(() => {
-    animate2(
+    animate3(
       "span",
       {
         opacity: 1,
       },
       {
         duration: 2,
-        delay: stagger(0.2, { startDelay: 4 }),
+        delay: stagger(0.3, { startDelay: 7.2 }),
       }
     );
   }, [scope3.current]);
-
-  const logos = () => {
-    return (
-      <div className="flex space-x-2 mt-2">
-        <a
-          href="https://www.linkedin.com/in/nahiyanahmed/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={linkedInLogo} alt="LinkedIn Logo" width="36px" />
-        </a>
-        <a
-          href="https://github.com/Nahiyan-16/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={githubLogo} alt="Github Logo" width="35px" />
-        </a>
-        <a
-          href="https://www.instagram.com/nahiyan16/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={instaLogo} alt="Instagram Logo" width="34px" />
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UC9zr1Q2LtQtxtlKc45P7kMA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={youtubeLogo} alt="Youtube Logo" width="36px" />
-        </a>
-      </div>
-    );
-  };
 
   const renderIntro = () => {
     return (
@@ -131,13 +103,28 @@ export const TextGenerateEffect = ({ className }: { className?: string }) => {
   };
 
   const renderLogo = () => {
-    return <motion.div ref={scope3}>{logos()}</motion.div>;
+    return (
+      <motion.div
+        ref={scope3}
+        className="flex space-x-2 mt-4 justify-center items-center"
+      >
+        {logos.map((logo, idx) => {
+          return (
+            <motion.span key={logo.img + idx} className="opacity-0">
+              <a href={logo.link} target="_blank" rel="noopener noreferrer">
+                <img src={logo.img} width="36px" />
+              </a>
+            </motion.span>
+          );
+        })}
+      </motion.div>
+    );
   };
 
   return (
     <div
       className={cn(
-        "font-bold h-[50%] flex justify-center items-center",
+        "font-bold h-[50%] flex justify-center items-center z-50",
         className
       )}
     >

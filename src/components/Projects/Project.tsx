@@ -1,6 +1,7 @@
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./floating-card";
 import ProjectDetail from "./ProjectDetail";
+import { SparklesCore } from "../sprakles";
 
 interface ProjectProps {
   title: string;
