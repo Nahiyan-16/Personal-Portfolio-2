@@ -1,40 +1,29 @@
 "use client";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-export function ContactPage() {
+const ContactPage: React.FC = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const serviceId = "service_cpv6c4i";
+  const templateId = "template_hef92nx";
+  const userId = "bdqguHW8EY7fa9dlR";
+
+  useEffect(() => emailjs.init(userId), []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const wholeMessage = `${name}: ${message}`;
-
-    const serviceId = process.env.MY_SERVICE_ID;
-    const templateId = process.env.MY_TEMPLATE_ID;
-    const userId = process.env.MY_USER_ID;
-
-    console.log("Service ID:", serviceId);
-    console.log("Template ID:", templateId);
-    console.log("User ID:", userId);
-
-    // emailjs
-    //   .sendForm(
-    //     serviceId,
-    //     templateId,
-    //     wholeMessage,
-    //     userId
-    //   )
-    //   .then(
-    //     (result) => {
-    //       alert("Message sent to Nahiyan");
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
-
+    try {
+      await emailjs.send(serviceId, templateId, {
+        user_name: name,
+        message: message,
+      });
+      console.log("Success!");
+    } catch (err) {
+      console.log(err);
+    }
     setName("");
     setMessage("");
   };
@@ -75,4 +64,6 @@ export function ContactPage() {
       </div>
     </div>
   );
-}
+};
+
+export default ContactPage;

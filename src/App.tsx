@@ -1,5 +1,5 @@
 import "./App.css";
-import { ContactPage } from "./components/contact-page";
+import ContactPage from "./components/contact-page";
 import HomePage from "./components/home-page";
 import { TracingBeam } from "./components/tracing-beam";
 import NavbarMenu from "./components/navbar";
