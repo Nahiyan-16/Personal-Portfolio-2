@@ -143,7 +143,7 @@ export const CardItem = ({
       ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
       {...rest}
-      onClick={handleClick}
+      onClick={link ? handleClick : () => {}}
     >
       {children}
     </Tag>
