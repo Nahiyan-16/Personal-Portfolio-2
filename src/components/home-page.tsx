@@ -3,7 +3,7 @@ import { SparklesCore } from "./sprakles";
 
 const HomePage = () => {
   return (
-    <div className="h-screen bg-neutral-950 relative flex flex-col items-center justify-start pt-[10%] antialiased">
+    <div className="h-screen bg-neutral-950 relative flex flex-col items-center justify-start pt-[50%] lg:pt-[10%] antialiased">
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
           id="tsparticlesfullpage"

@@ -18,11 +18,14 @@ function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-lg mx-auto z-50", className)}
+      className={cn(
+        "fixed lg:inset-x-0 lg:w-[30%] w-[100%] mr-auto ml-auto z-50 flex justify-center",
+        className
+      )}
     >
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Links">
-          <div className="flex flex-col space-y-4 text-md">
+          <div className="flex flex-col space-y-4 text-sm lg:text-md">
             <HoveredLink href="https://www.linkedin.com/in/nahiyanahmed/">
               LinkedIn
             </HoveredLink>
@@ -38,7 +41,7 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Projects">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+          <div className="  text-sm grid lg:grid-cols-2 grid-cols-1 gap-10 p-4">
             <ProjectItem
               title="Plan Your Day"
               href="#planYourDay"

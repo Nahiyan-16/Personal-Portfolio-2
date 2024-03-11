@@ -131,7 +131,7 @@ export const TextGenerateEffect = ({ className }: { className?: string }) => {
       <div className="mt-4">
         <div className="leading-snug tracking-wide">
           <div className="text-5xl mb-5">{renderIntro()}</div>
-          <div className="text-3xl w-[50%] mr-auto ml-auto">
+          <div className="text-3xl w-[90%] lg:w-[50%] mr-auto ml-auto">
             {renderContent()}
           </div>
           <div className="text-3xl w-[100%] mr-auto ml-auto">

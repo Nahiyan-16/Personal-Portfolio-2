@@ -8,7 +8,7 @@ import About from "./components/About";
 
 function App() {
   return (
-    <div className="App bg-black mt-8">
+    <div className="App bg-black lg:mt-8">
       <TracingBeam
         children={
           <>
