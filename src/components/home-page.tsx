@@ -2,12 +2,6 @@ import { TextGenerateEffect } from "../components/text-generate-effect";
 import { SparklesCore } from "./sprakles";
 
 const HomePage = () => {
-  const temp = (
-    <>
-      <TextGenerateEffect />
-    </>
-  );
-
   return (
     <div className="h-screen bg-neutral-950 relative flex flex-col items-center justify-start pt-[10%] antialiased">
       <div className="w-full absolute inset-0 h-screen">
@@ -21,7 +15,7 @@ const HomePage = () => {
           particleColor="#FFFFFF"
         />
       </div>
-      {temp}
+      <TextGenerateEffect />
     </div>
   );
 };

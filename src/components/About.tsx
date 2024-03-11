@@ -4,11 +4,13 @@ import data from "../data/data";
 const About = () => {
   return (
     <div
-      className="h-screen w-[100%] bg-neutral-950 px-[10%] flex flex-col justify-center"
+      className="h-screen w-[100%] bg-neutral-950 flex flex-col justify-center"
       id="about"
     >
-      <h1 className="mb-10 text-[5rem]">About</h1>
-      <p className="text-[1.5rem]">{data.about.text}</p>
+      <div className="w-[75%] mr-auto ml-auto">
+        <h1 className="mb-10 text-[5rem]">About</h1>
+        <p className="text-[1.5rem]">{data.about.text}</p>
+      </div>
     </div>
   );
 };

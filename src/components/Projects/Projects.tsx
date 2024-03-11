@@ -1,6 +1,7 @@
 import React from "react";
 import Project from "./Project";
 import data from "../../data/data";
+import { SparklesCore } from "../sprakles";
 
 export function Projects() {
   return (

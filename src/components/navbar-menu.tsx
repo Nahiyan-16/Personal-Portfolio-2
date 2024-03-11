@@ -106,7 +106,6 @@ export const ProjectItem = ({
 };
 
 export const HoveredLink = ({ children, ...rest }: any) => {
-  console.log(children);
   return (
     <a
       target={children === "About" || children === "Contact" ? "" : "_blank"}

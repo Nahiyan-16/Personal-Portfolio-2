@@ -124,7 +124,7 @@ export const TextGenerateEffect = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "font-bold h-[50%] flex justify-center items-center z-50",
+        "font-bold h-[50%] flex justify-center items-center z-20",
         className
       )}
     >
